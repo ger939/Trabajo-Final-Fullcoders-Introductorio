@@ -1,5 +1,5 @@
 # Trabajo-Final-Fullcoders-Introductorio
-programa control gastos
+Programa ControlGastos
 
 Se creo un programa llamado que ayuda al usuario a llevar un control de sus gastos mensuales tomando de base su salario mensual. 
 
