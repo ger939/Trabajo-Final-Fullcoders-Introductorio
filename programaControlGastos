@@ -1,0 +1,75 @@
+Algoritmo ControlGastos
+
+saldo_inicial = Escribir ("ingrese su salario mensual")
+gastos = {"servicios": 0, "seguros": 0, "ocio": 0, "ahorro": 0, "otros": 0}  
+opcion = 0
+
+
+mientras opcion != 6:
+  
+    Escribir("1. Registrar gasto en servicios")
+    Escribir("2. Registrar gasto en seguros")
+    Escribir("3. Registrar gasto en ocio")
+    Escribir("4. Registrar ahorro")
+    Escribir("5. Registrar gasto en otros")
+    Escribir("6. Salir")
+    Leer(opcion)
+
+    
+    si opcion == 1:
+        
+        Escribir("Ingrese el monto del gasto en servicios:")
+        Leer(gasto)
+        saldo_inicial = saldo_inicial - gasto
+        gastos["servicios"] = gastos["servicios"] + gasto
+        Escribir("Gasto registrado con éxito en servicios.")
+
+    elif opcion == 2:
+
+        Escribir("Ingrese el monto del gasto en seguros:")
+        Leer(gasto)
+        saldo_inicial = saldo_inicial - gasto
+        gastos["seguros"] = gastos["seguros"] + gasto
+        Escribir("Gasto registrado con éxito en seguros.")
+
+    elif opcion == 3:
+
+        Escribir("Ingrese el monto del gasto en ocio:")
+        Leer(gasto)
+        saldo_inicial = saldo_inicial - gasto
+        gastos["ocio"] = gastos["ocio"] + gasto
+        Escribir("Gasto registrado con éxito en ocio.")
+
+    elif opcion == 4:
+       
+        Escribir("Ingrese la cantidad que desea ahorrar:")
+        Leer(ahorro)
+        saldo_inicial = saldo_inicial + ahorro
+        gastos["ahorro"] = gastos["ahorro"] + ahorro
+        Escribir("Ahorro registrado con éxito.")
+
+    elif opcion == 5:
+
+        Escribir("Ingrese el monto del gasto en otros:")
+        Leer(gasto)
+        saldo_inicial = saldo_inicial - gasto
+        gastos["otros"] = gastos["otros"] + gasto
+        Escribir("Gasto registrado con éxito en otros.")
+
+    elif opcion == 6:
+       
+        Escribir("Gracias por usar la aplicación. ¡Adiós!")
+
+    otro:
+        Escribir("Opción no válida. Por favor, seleccione una opción válida.")
+
+
+Escribir("Resumen de gastos:")
+
+para categoria, gasto_categoria en gastos:
+
+    Escribir(categoria + ": $" + gasto_categoria)
+
+Escribir("Saldo restante: $" + saldo_inicial)
+
+FinAlgoritmo
